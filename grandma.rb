@@ -2,7 +2,15 @@ while true
   puts 'What would you like to say to Grandma?'
   talk = gets.chomp
   if talk == 'BYE'
-    break
+    puts 'EH, WHAT DID YOU SAY?'
+    talk = gets.chomp
+    if talk == 'BYE'
+      puts 'EH? WHAT DID YOU SAY?'
+      talk = gets.chomp
+      if talk == 'BYE'
+        break
+      end
+    end
   end
   if talk != talk.upcase
     puts 'HUH?! SPEAK UP SONNY!'
